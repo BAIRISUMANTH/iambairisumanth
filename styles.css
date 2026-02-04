@@ -1,0 +1,233 @@
+:root {
+  --bg: #000;
+  --text: #f5f5f5;
+  --muted: #c7c7c7;
+  --line: rgba(255, 255, 255, 0.2);
+  --accent: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  align-items: center;
+  padding: 4.5rem 8vw 1rem;
+}
+
+.hero-media {
+  display: flex;
+  justify-content: center;
+}
+
+.portrait {
+  width: min(360px, 80vw);
+  aspect-ratio: 1 / 1.2;
+  border: 2px solid var(--line);
+  background: linear-gradient(135deg, #3a3a3a, #111);
+  position: relative;
+  overflow: hidden;
+}
+
+.portrait::after {
+  content: "Portrait";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: "Cinzel", serif;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  font-family: "Cinzel", serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  letter-spacing: 4px;
+}
+
+.degree {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  margin: 1rem 0 2rem;
+}
+
+.address {
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+}
+
+.section {
+  padding: 0 8vw;
+}
+
+.section h2 {
+  font-family: "Cinzel", serif;
+  letter-spacing: 3px;
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  margin-bottom: 2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.about-card {
+  border: 1px solid var(--line);
+  padding: 1.5rem;
+  background: #0b0b0b;
+}
+
+.about-card .label {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.about-card .value {
+  font-size: 1.1rem;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.education-grid article {
+  border: 1px solid var(--line);
+  padding: 1.5rem;
+  background: #0a0a0a;
+}
+
+.education-grid h3 {
+  margin-bottom: 0.6rem;
+}
+
+.education-grid p {
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.education-grid span {
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.works-card {
+  border: 1px solid var(--line);
+  padding: 2rem;
+  background: #0b0b0b;
+  display: grid;
+  gap: 1rem;
+}
+
+.link {
+  font-family: "Cinzel", serif;
+  letter-spacing: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.skills-grid h3 {
+  margin-bottom: 0.8rem;
+  font-family: "Cinzel", serif;
+  letter-spacing: 1px;
+}
+
+.skills-grid ul {
+  list-style: none;
+  color: var(--muted);
+}
+
+.skills-grid li {
+  margin-bottom: 0.5rem;
+}
+
+.quote {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  letter-spacing: 2px;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.quote span {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.connect {
+  padding-bottom: 4rem;
+}
+
+.connect-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  border-top: 1px solid var(--line);
+  padding-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border: 1px solid var(--line);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-top: 3rem;
+  }
+
+  .portrait {
+    width: min(320px, 90vw);
+  }
+
+  .address {
+    font-size: 0.85rem;
+  }
+}
